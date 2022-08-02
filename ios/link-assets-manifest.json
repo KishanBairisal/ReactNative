@@ -1,0 +1,37 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "NewPro/assets/fonts/Almarai ExtraBold.ttf",
+      "sha1": "1027eff77cef57a47cbb4842a64b47fbc4c30ba4"
+    },
+    {
+      "path": "NewPro/assets/fonts/Calligraffitti Regular.ttf",
+      "sha1": "578fc847ec28c223da45884b9799026788b2db83"
+    },
+    {
+      "path": "NewPro/assets/fonts/DancingScript-Bold.ttf",
+      "sha1": "42858229a137c5188a859df102afff145200114d"
+    },
+    {
+      "path": "NewPro/assets/fonts/DancingScript-Medium.ttf",
+      "sha1": "30711d9cdbed046fef8128082c6cc1a9287dbc7c"
+    },
+    {
+      "path": "NewPro/assets/fonts/DancingScript-Regular.ttf",
+      "sha1": "b52e869bd47b6e98fd907ae00b1828916451b3b0"
+    },
+    {
+      "path": "NewPro/assets/fonts/DancingScript-SemiBold.ttf",
+      "sha1": "b5e71ddbaca9b4d5953f0c5e45bf326fb7df35ba"
+    },
+    {
+      "path": "NewPro/assets/fonts/icomoon.ttf",
+      "sha1": "71915c7877a5ed6fad3f8bf0767b75d14077dabd"
+    },
+    {
+      "path": "NewPro/assets/fonts/poppins italic.ttf",
+      "sha1": "e2bfcd56016c3c915221ef1c5fc1a17b0776eb91"
+    }
+  ]
+}
