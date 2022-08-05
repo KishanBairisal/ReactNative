@@ -6,17 +6,18 @@ import AccountScreen from './Screens/AccountScreen';
 import AdminScreen from './Screens/AdminScreen';
 import HRScreen from './Screens/HRScreen';
 import TechScreen from './Screens/TechScreen';
+import { style } from 'deprecated-react-native-prop-types/DeprecatedImagePropType';
 
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
-    <NavigationContainer>
+    <NavigationContainer >
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="HR" component={HRScreen} />
-        <Stack.Screen name="Account" component={AccountScreen} />
-        <Stack.Screen name="Admin" component={AdminScreen} />
-        <Stack.Screen name="Tech" component={TechScreen} />
+        <Stack.Screen name="Home" options={{ headerTitleAlign: 'center', headerStyle: { backgroundColor: 'green' } }} component={HomeScreen} />
+        <Stack.Screen name="HR" options={{ headerTitleAlign: 'center', headerStyle: { backgroundColor: 'white' } }} component={HRScreen} />
+        <Stack.Screen name="Account" options={{ headerTitleAlign: 'center' }} component={AccountScreen} />
+        <Stack.Screen name="Admin" options={{ headerTitleAlign: 'center' }} component={AdminScreen} />
+        <Stack.Screen name="Tech" options={{ headerTitleAlign: 'center', headerStyle: { backgroundColor: 'rgb(250,220,230)' } }} component={TechScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   )
