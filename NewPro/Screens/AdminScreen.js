@@ -1,12 +1,43 @@
 import React, { useState } from "react";
-import { View, Dimensions, Text, Animated, StyleSheet, PanResponder, AsyncStorageStatic, Button } from "react-native";
+import { View, Dimensions, Text, Animated, StyleSheet, PanResponder, Button } from "react-native";
+import { AsyncStorage } from '@react-native-async-storage/async-storage';
 import FooterButton from "../FooterButtons";
 import Icon from "../Icon";
 // import GetRandomUsers from "../Axios";
 
 export default function AdminScreen({ navigation }) {
 
-  [item, setItem] = useState('loading');
+  [fullName, setFullName] = useState('AAAA');
+
+
+  const storeData = async () => {
+    try {
+      await AsyncStorage.setItem('mykey', 'Kishan', () => {
+        console.log("ok");
+      });
+      setFullName('mykey');
+
+    }
+    catch (error) {
+      console.log(error);
+    }
+    console.log(fullName);
+  };
+
+  const deleteData = async () => {
+    try {
+      console.log('mykey');
+
+      AsyncStorage.removeItem('mykey', () => {
+        console.log("deleted");
+        setFullName('mykey');
+      })
+    }
+    catch (error) {
+    }
+    console.log(setFullName)
+  }
+
 
   const { width, height } = Dimensions.get("screen");
   const position = new Animated.ValueXY({ x: 0, y: 0 });//for animation
@@ -39,28 +70,8 @@ export default function AdminScreen({ navigation }) {
     outputRange: ["0deg", "360deg"]
   });
 
-  const storeData = async () => {
-    try {
-      await AsyncStorageStatic.setItem('key', 'cnq');
-      setItem('key');
-    }
-    catch (error) {
-      console.log(error)
-    }
-    console.log(item)
-  };
 
-  // const deleteData = async () => {
-  //   try {
-  //     AsyncStorageStatic.removeItem('mykey', () => {
-  //       console.log("deleted")
-  //       setItem('mykey')
-  //     })
-  //   }
-  //   catch (error) {
-  //   }
-  //   console.log(item)
-  // }
+
   return (
     <View style={{ flex: 1, width, height }}>
       <View style={{
@@ -86,7 +97,8 @@ export default function AdminScreen({ navigation }) {
         }} />
         <View style={{ justifyContent: "center", alignItems: 'center' }}>
           <Button title="store it" onPress={storeData} />
-          <Text>{item}</Text>
+          <Button title="Delete store" onPress={deleteData} />
+          <Text>{fullName}</Text>
         </View>
       </View>
       <View style={{ flex: 0.1 }}>
