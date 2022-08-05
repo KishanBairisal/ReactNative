@@ -213,7 +213,7 @@ export default function TechScreen({ navigation }) {
 
 
           <View style={styles.Border} >
-            <ImageBackground source={B} resizeMode="cover" style={styles.box} ><Text style={{ paddingLeft: 90 }}>
+            <ImageBackground source={source} resizeMode="cover" style={styles.box} ><Text style={{ paddingLeft: 90 }}>
               <Icon name="film" style={{ paddingLeft: 50, justifyContent: 'center', fontSize: 30 }} />
             </Text>
             </ImageBackground>

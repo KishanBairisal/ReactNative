@@ -11,8 +11,8 @@ import { style } from 'deprecated-react-native-prop-types/DeprecatedImagePropTyp
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
-    <NavigationContainer >
-      <Stack.Navigator initialRouteName="Home">
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home" >
         <Stack.Screen name="Home" options={{ headerTitleAlign: 'center', headerStyle: { backgroundColor: 'green' } }} component={HomeScreen} />
         <Stack.Screen name="HR" options={{ headerTitleAlign: 'center', headerStyle: { backgroundColor: 'white' } }} component={HRScreen} />
         <Stack.Screen name="Account" options={{ headerTitleAlign: 'center' }} component={AccountScreen} />

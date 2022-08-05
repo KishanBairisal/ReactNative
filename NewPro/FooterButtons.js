@@ -9,15 +9,14 @@ export default function FooterButton({ navigation }) {
       < TouchableOpacity onPress={() => { navigation.navigate('Home'); GetRandomUsers(10); }} style={{
         height: 50, width: 60, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 5,
         backgroundColor: 'yellow', borderRadius: 5
-      }}><Text>   <Icon name="quill" style={{ alignSelf: 'center', justifyContent: 'center', fontSize: 20 }} />
-          Home</Text>
+      }}><Text>   <Icon name="quill" style={{ alignSelf: 'center', justifyContent: 'center', fontSize: 20 }} />{'\n'}Home</Text>
       </TouchableOpacity>
 
       < TouchableOpacity onPress={() => navigation.navigate('HR')} style={{
         height: 50, width: 60, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 5,
         backgroundColor: 'yellow', borderRadius: 5
       }}>
-        <Text>    <Icon name="image" style={{ alignSelf: 'center', justifyContent: 'center', fontSize: 20 }} />   HR</Text>
+        <Text>   <Icon name="image" style={{ alignSelf: 'center', justifyContent: 'center', fontSize: 20 }} />{'\n'}   HR</Text>
       </TouchableOpacity>
 
       < TouchableOpacity onPress={() => navigation.navigate('Account')} style={{
